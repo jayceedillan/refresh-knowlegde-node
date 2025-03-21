@@ -9,7 +9,7 @@ export const getLogin = async (
 ): Promise<void> => {
   try {
     const { error } = loginSchema.validate(req.body);
-    console.log("error", "xxxxx");
+
     if (error) {
       res.status(400).json({ message: error.details[0].message });
       return;
